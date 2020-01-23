@@ -1,6 +1,9 @@
 <?php
-
 error_reporting( E_ERROR );
+ob_flush();
+flush();
+
+
 $dobk=0;
 $source_folder=$argv[1];
 $des_folder=$argv[2];
@@ -24,9 +27,11 @@ $inprogess_folder="";
 $des=$des_folder."/".$backup_title."_".$cdate;
 $latest_link=$des_folder."/".$backup_title."_latest_link";
 $cmdx="rsync -av  \"".$source_folder."\" \"".$des."/\" --link-dest=\"".$latest_link."\"";
+
 print $cmdx."\n";
 
-$cmdx="rm ".$latest_link." ";
+
+$cmdx="rm \"".$latest_link."\" ;  ln -vs \"".$des."/\" \"".$latest_link."\"";
 print $cmdx."\n";
 
 print "\n";
