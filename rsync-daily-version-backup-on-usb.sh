@@ -16,7 +16,7 @@ touch /tmp/read-fvb-backup-working.pid
 ##Example : 
 ##php fvb-take-backup.php "/home/mailadmin/Documents" "/home/mailadmin/timebackup" "dvddocs" > temp-backup.sh
 
-php fvb-take-backup.php "/home" "/mnt/usbbackup/fileserver/version-backup/" "fileserver-home-backup" > temp-backup.sh
+php fvb-take-backup.php "/home" "/mnt/usbbackup/fileserver/version-backup" "fileserver-home-backup" > temp-backup.sh
 sh temp-backup.sh
 
 echo done.
