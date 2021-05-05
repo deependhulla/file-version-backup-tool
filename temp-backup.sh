@@ -1,4 +1,4 @@
-rsync -av  "/home/mailadmin/Documents" "/home/mailadmin/timebackup/dvddocs_2020-01-23_18-32-13/" --link-dest="/home/mailadmin/timebackup/dvddocs_latest_link"
-rm "/home/mailadmin/timebackup/dvddocs_latest_link" ;  ln -vs "/home/mailadmin/timebackup/dvddocs_2020-01-23_18-32-13/" "/home/mailadmin/timebackup/dvddocs_latest_link"
-find "/home/mailadmin/timebackup/dvddocs_2020-01-23_18-32-13/" -type f -links 1 -exec du -sh  {} \; > "/home/mailadmin/timebackup/dvddocs_2020-01-23_18-32-13_report.txt"
-echo "Read file for  /home/mailadmin/timebackup/dvddocs_2020-01-23_18-32-13_report.txt "  
+rsync -av  "/mnt/onedrivebackup/onedrivedev-data" "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-01-05/" --link-dest="/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_latest_link"
+rm "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_latest_link" ;  ln -vs "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-01-05/" "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_latest_link"
+find "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-01-05/" -type f -links 1 -exec du -sh  {} \; > "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-01-05_report.txt"
+echo "Read file for  /mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-01-05_report.txt "  

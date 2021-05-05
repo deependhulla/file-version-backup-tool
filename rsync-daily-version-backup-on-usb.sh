@@ -17,6 +17,7 @@ touch /tmp/read-fvb-backup-working.pid
 ##php fvb-take-backup.php "/home/mailadmin/Documents" "/home/mailadmin/timebackup" "dvddocs" > temp-backup.sh
 
 php fvb-take-backup.php "/home" "/mnt/usbbackup/fileserver/version-backup" "fileserver-home-backup" > temp-backup.sh
+php fvb-take-backup.php "/mnt/onedrivebackup/onedrivedev-data" "/mnt/onedrivebackup/onedrivedev-version-backup" "onedrivedev-backup" > temp-backup.sh
 sh temp-backup.sh
 
 echo done.

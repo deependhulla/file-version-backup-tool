@@ -58,7 +58,7 @@ echo "postfix postfix/mailname string $CFG_HOSTNAME_FQDN" | debconf-set-selectio
 echo "iptables-persistent iptables-persistent/autosave_v4 boolean true" | debconf-set-selections
 echo "iptables-persistent iptables-persistent/autosave_v6 boolean true" | debconf-set-selections
 
-apt-get -y install postfix openssh-server vim iptraf screen mc net-tools sshfs telnet iputils-ping psmisc apt-transport-https elinks xfsprogs debconf-utils pwgen ca-certificates gnupg2 wget unzip zip software-properties-common htop sudo sendemail  rar unrar build-essential libcurl4-openssl-dev libsqlite3-dev pkg-config git curl libnotify-dev php-cli g++ cmake make qtdeclarative5-dev
+apt-get -y install postfix openssh-server vim iptraf screen mc net-tools sshfs telnet iputils-ping psmisc apt-transport-https elinks xfsprogs debconf-utils pwgen ca-certificates gnupg2 wget unzip zip software-properties-common htop sudo sendemail rsync rar unrar build-essential libcurl4-openssl-dev libsqlite3-dev pkg-config git curl libnotify-dev php-cli g++ cmake make qtdeclarative5-dev
 
 
 ## make cpan auto yes for pre-requist modules of perl
