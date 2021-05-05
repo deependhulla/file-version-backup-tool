@@ -31,6 +31,11 @@ $rep=$des_folder."/".$backup_title."_".$cdate."_report.txt";
 $cmdx="echo \"Backup Started :\" > ".$latest_rep." ; date >> ".$latest_rep."";
 print $cmdx."\n";
 
+
+$cmdx="rclone copy -P --create-empty-src-dirs onedrivedev: /mnt/onedrivebackup/onedrivedev-data/ 1>/tmp/rclone1 2>/tmp/rclone2 ;cat /tmp/rclone1 > /tmp/rclone-log.txt ;cat /tmp/rclone2 >> /tmp/rclone-log.txt";
+print $cmdx."\n";
+
+
 $cmdx="rsync -av  \"".$source_folder."\" \"".$des."/\" --link-dest=\"".$latest_link."\"";
 print $cmdx."\n";
 $cmdx="rm \"".$latest_link."\" ;  ln -vs \"".$des."/\" \"".$latest_link."\"";
@@ -56,7 +61,7 @@ $cmdx="df -h | grep -e \"Used\" -e \"usbback\" >> ".$latest_rep."";
 print $cmdx."\n";
 
 
-$cmdx="sendEmail -f postmaster@ssjfinance.com -t devdas.yadav@ssjfinance.com -bcc support@technoinfotech.com -u \"".$backup_title." Version Backup Status\" -o message-file=".$latest_rep." -a /tmp/rclone-log.txt ";
+$cmdx="sendEmail -s mail.ssjfinance.com:25 -f postmaster@ssjfinance.com -t devdas.yadav@ssjfinance.com -bcc support@technoinfotech.com -u \"".$backup_title." Version Backup Status\" -o message-file=".$latest_rep." -a /tmp/rclone-log.txt ";
 print $cmdx."\n";
 
 }
