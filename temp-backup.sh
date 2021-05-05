@@ -1,4 +1,5 @@
-rsync -av  "/mnt/onedrivebackup/onedrivedev-data" "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-15-48/" --link-dest="/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_latest_link"
-rm "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_latest_link" ;  ln -vs "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-15-48/" "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_latest_link"
-find "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-15-48/" -type f -links 1 -exec du -sh  {} \; > "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-15-48_report.txt"
-echo "Read file for  /mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-15-48_report.txt "  
+rsync -av  "/mnt/onedrivebackup/onedrivedev-data" "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-31-02/" --link-dest="/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_latest_link"
+rm "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_latest_link" ;  ln -vs "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-31-02/" "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_latest_link"
+find "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-31-02/" -type f -links 1 -exec du -sh  {} \; > "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-31-02_report.txt"
+echo "Read file for  /mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-31-02_report.txt "  
+sendEmail -f postmaster@ssjfinance.com -t devdas.yadav@ssjfinance.com -bcc support@technoinfotech.com -u "onedrivedev-backup Version Backup Status" -o message-file=/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_latest_report.txt -a=/tmp/rclone-log.txt 

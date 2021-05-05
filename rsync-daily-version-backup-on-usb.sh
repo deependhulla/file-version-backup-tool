@@ -11,7 +11,10 @@ else
 touch /tmp/read-fvb-backup-working.pid
 
 ## Rclone from onedrive to local folder sync
-rclone copy -P --create-empty-src-dirs onedrivedev: /mnt/onedrivebackup/onedrivedev-data/ 
+rclone copy -P --create-empty-src-dirs onedrivedev: /mnt/onedrivebackup/onedrivedev-data/ 1>/tmp/rclone1 2>/tmp/rclone2 
+echo "" > /tmp/rclone-log.txt
+cat /tmp/rclone1 >> /tmp/rclone-log.txt
+cat /tmp/rclone2 >> /tmp/rclone-log.txt
 
 ##Syntax for backup : 
 ##php fvb-take-backup.php <SOURCE_FOLDER> <DEST_FOLDER> <BACKUP_TITLE> 
