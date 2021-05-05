@@ -1,4 +1,4 @@
-rsync -av  "/mnt/onedrivebackup/onedrivedev-data" "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-01-05/" --link-dest="/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_latest_link"
-rm "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_latest_link" ;  ln -vs "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-01-05/" "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_latest_link"
-find "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-01-05/" -type f -links 1 -exec du -sh  {} \; > "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-01-05_report.txt"
-echo "Read file for  /mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-01-05_report.txt "  
+rsync -av  "/mnt/onedrivebackup/onedrivedev-data" "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-15-48/" --link-dest="/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_latest_link"
+rm "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_latest_link" ;  ln -vs "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-15-48/" "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_latest_link"
+find "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-15-48/" -type f -links 1 -exec du -sh  {} \; > "/mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-15-48_report.txt"
+echo "Read file for  /mnt/onedrivebackup/onedrivedev-version-backup/onedrivedev-backup_2021-05-05_11-15-48_report.txt "  

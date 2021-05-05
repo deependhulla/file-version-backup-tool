@@ -10,6 +10,8 @@ else
 
 touch /tmp/read-fvb-backup-working.pid
 
+## Rclone from onedrive to local folder sync
+rclone copy -P --create-empty-src-dirs onedrivedev: /mnt/onedrivebackup/onedrivedev-data/ 
 
 ##Syntax for backup : 
 ##php fvb-take-backup.php <SOURCE_FOLDER> <DEST_FOLDER> <BACKUP_TITLE> 
